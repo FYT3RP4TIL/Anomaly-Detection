@@ -22,10 +22,12 @@ Isolation Forest is an unsupervised learning algorithm used for anomaly detectio
 3. **Anomaly Score**:
    - The anomaly score for each point is based on the depth of the tree where the point was isolated. The score is normalized such that the lower the score, the more anomalous the point is considered.
    - The anomaly score is calculated for each data point across all trees, and the average score is used to determine if a point is an anomaly.
+
      ![](https://github.com/user-attachments/assets/73fdd90e-9ca4-4246-b148-8bb8b8dcba18)
 
 5. **Threshold**:
    - By setting a threshold on the anomaly score, data points can be classified as normal or anomalous. Points with scores above the threshold are labeled as anomalies.
+
      ![Screenshot 2024-08-28 152501](https://github.com/user-attachments/assets/c7b2a548-29bc-4bf8-9005-86b146d549ed)
 
 ### Advantages
@@ -52,9 +54,15 @@ DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is an unsup
    - **Core Points**: Points that have at least a minimum number of neighboring points (MinPts) within a given radius (ε). These points form the dense regions of the data.
    - **Border Points**: Points that have fewer than MinPts within ε but are still within the neighborhood of a core point. They belong to the edge of a cluster.
    - **Noise**: Points that are neither core points nor border points and are considered outliers or anomalies. These points do not belong to any cluster.
-     ![](https://github.com/user-attachments/assets/1f39f50e-8eb3-4074-a523-041293099deb)
-     ![](https://github.com/user-attachments/assets/60884540-cba8-4275-a918-b002a3025f77)
-     ![](https://github.com/user-attachments/assets/0300982e-f448-48e2-b383-ecd27d0ddb26)
+
+     <p align="left">
+    <img src="https://github.com/user-attachments/assets/1f39f50e-8eb3-4074-a523-041293099deb" alt="Image 1" width="550">
+    <br>
+    <img src="https://github.com/user-attachments/assets/60884540-cba8-4275-a918-b002a3025f77" alt="Image 2" width="550">
+    <br>
+    <img src="https://github.com/user-attachments/assets/0300982e-f448-48e2-b383-ecd27d0ddb26" alt="Image 3" width="550">
+   </p>
+
 
 
 
