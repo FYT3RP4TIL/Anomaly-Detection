@@ -69,10 +69,12 @@ DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is an unsup
    - **ε (Epsilon)**: The maximum distance between two points for one to be considered as in the neighborhood of the other.
    - **MinPts**: The minimum number of points required to form a dense region (cluster).
 
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/ffb68d91-4942-411e-a268-2cef7dae6c30" alt="Image 1" height="300">
+    <img src="https://github.com/user-attachments/assets/9f02a377-cea9-4293-9bd7-c5629c6aa766" alt="Image 2" height="300">
+</p>
 
 ### Applications
-
-Isolation Forest is widely used in various applications, including:
 
 - Fraud detection in financial transactions
 - Intrusion detection in cybersecurity
