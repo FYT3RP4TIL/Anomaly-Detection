@@ -46,6 +46,8 @@ DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is an unsup
 
 ### Key Concepts
 
+![](https://github.com/user-attachments/assets/a9043861-fbc1-4c70-bf08-a8b8b8faae7c)
+
 1. **Core Points, Border Points, and Noise**:
    - **Core Points**: Points that have at least a minimum number of neighboring points (MinPts) within a given radius (ε). These points form the dense regions of the data.
    - **Border Points**: Points that have fewer than MinPts within ε but are still within the neighborhood of a core point. They belong to the edge of a cluster.
