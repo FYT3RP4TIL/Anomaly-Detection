@@ -36,6 +36,10 @@ Isolation Forest is an unsupervised learning algorithm used for anomaly detectio
 
 # DBSCAN Anomaly Detection
 
+<div align="center">
+    <img src="https://github.com/user-attachments/assets/92024f19-42ae-4c4b-8af3-bb0a7e68092a" alt="Centered Image">
+</div
+
 ## How It Works
 
 DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is an unsupervised learning algorithm primarily used for clustering, but it also excels at detecting anomalies. The key idea behind DBSCAN is to group together points that are closely packed (dense regions) and mark points that lie alone in low-density regions as anomalies.
