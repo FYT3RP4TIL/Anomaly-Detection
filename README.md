@@ -34,6 +34,31 @@ Isolation Forest is an unsupervised learning algorithm used for anomaly detectio
 - **No Assumptions**: Unlike many other anomaly detection methods, Isolation Forest does not make any assumptions about the distribution of data, making it versatile for different types of datasets.
 - **Works Well with High Dimensional Data**: The random partitioning process does not suffer from the curse of dimensionality, making Isolation Forest effective even in high-dimensional spaces.
 
+# DBSCAN Anomaly Detection
+
+## How It Works
+
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is an unsupervised learning algorithm primarily used for clustering, but it also excels at detecting anomalies. The key idea behind DBSCAN is to group together points that are closely packed (dense regions) and mark points that lie alone in low-density regions as anomalies.
+
+### Key Concepts
+
+1. **Core Points, Border Points, and Noise**:
+   - **Core Points**: Points that have at least a minimum number of neighboring points (MinPts) within a given radius (ε). These points form the dense regions of the data.
+   - **Border Points**: Points that have fewer than MinPts within ε but are still within the neighborhood of a core point. They belong to the edge of a cluster.
+   - **Noise**: Points that are neither core points nor border points and are considered outliers or anomalies. These points do not belong to any cluster.
+
+2. **Density-Based Clustering**:
+   - DBSCAN starts with an arbitrary point and retrieves its ε-neighborhood. If this neighborhood contains at least MinPts, the process continues by expanding the cluster. Otherwise, the point is labeled as noise (an anomaly). However, if this point later falls within the ε-neighborhood of a core point, it may be reassigned to a cluster.
+   - The algorithm iteratively clusters points, with points that do not belong to any cluster remaining labeled as anomalies.
+
+3. **Anomaly Detection**:
+   - Anomalies are identified as the points that are labeled as noise by DBSCAN. These are points that do not have enough neighbors within the specified ε distance to be included in any cluster.
+
+4. **Parameters**:
+   - **ε (Epsilon)**: The maximum distance between two points for one to be considered as in the neighborhood of the other.
+   - **MinPts**: The minimum number of points required to form a dense region (cluster).
+
+
 ### Applications
 
 Isolation Forest is widely used in various applications, including:
