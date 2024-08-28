@@ -63,9 +63,6 @@ DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is an unsup
     <img src="https://github.com/user-attachments/assets/0300982e-f448-48e2-b383-ecd27d0ddb26" alt="Image 3" width="550">
    </p>
 
-
-
-
 2. **Density-Based Clustering**:
    - DBSCAN starts with an arbitrary point and retrieves its ε-neighborhood. If this neighborhood contains at least MinPts, the process continues by expanding the cluster. Otherwise, the point is labeled as noise (an anomaly). However, if this point later falls within the ε-neighborhood of a core point, it may be reassigned to a cluster.
    - The algorithm iteratively clusters points, with points that do not belong to any cluster remaining labeled as anomalies.
@@ -82,11 +79,38 @@ DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is an unsup
     <img src="https://github.com/user-attachments/assets/9f02a377-cea9-4293-9bd7-c5629c6aa766" alt="Image 2" height="250">
 </p>
 
-### Applications
+# Local Outlier Factor (LOF) Anomaly Detection
+
+![](https://github.com/user-attachments/assets/f425ef6b-13ff-43dd-9a3c-026a20e420e9)
+
+## How It Works
+
+Local Outlier Factor (LOF) is an unsupervised learning algorithm used for anomaly detection. The key idea behind LOF is to measure the local density deviation of a given data point with respect to its neighbors. The algorithm identifies points that have a significantly lower density than their neighbors as anomalies. Works on KNN.
+
+### Key Concepts
+
+1. **Local Density**:
+   - The local density of a point is estimated by calculating the distance between the point and its nearest neighbors.
+   - A point's local density is considered low if the average distance to its neighbors is high, indicating that the point is an outlier compared to its surrounding points.
+
+2. **Reachability Distance**:
+   - The reachability distance is defined for a point `A` with respect to another point `B` as the maximum of the distance between `A` and `B`, and the minimum distance required to reach `B` from any of its nearest neighbors.
+   - This distance helps in comparing the density of different points by ensuring that outliers do not overly influence the distance calculations.
+
+3. **Local Reachability Density (LRD)**:
+   - The LRD of a point is the inverse of the average reachability distance from its neighbors.
+   - Points in dense clusters will have a high LRD, while outliers will have a low LRD.
+
+4. **LOF Score**:
+   - The LOF score is calculated by comparing the LRD of a point to the LRDs of its neighbors. 
+   - A point with a high LOF score (greater than 1) is considered an anomaly because its density is significantly lower than that of its neighbors.
+   - The LOF score is used to rank the data points according to their degree of outlierness.
+
+## Applications - Anomoly Detection
 
 - Fraud detection in financial transactions
 - Intrusion detection in cybersecurity
 - Fault detection in manufacturing systems
 - Health monitoring systems
 
-By leveraging the Isolation Forest algorithm, it is possible to efficiently and accurately identify anomalies in various datasets, making it a valuable tool for detecting unusual patterns that could indicate problems or unusual behavior.
+By leveraging these algorithms, it is possible to efficiently and accurately identify anomalies in various datasets, making it a valuable tool for detecting unusual patterns that could indicate problems or unusual behavior.
